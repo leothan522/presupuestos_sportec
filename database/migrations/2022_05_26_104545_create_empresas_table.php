@@ -21,6 +21,7 @@ class CreateEmpresasTable extends Migration
             $table->text('direccion');
             $table->string('telefono');
             $table->string('email');
+            $table->string('moneda')->default('Bs.');
             $table->integer('default')->default(0);
             $table->timestamps();
         });

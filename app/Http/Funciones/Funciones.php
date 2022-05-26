@@ -230,3 +230,12 @@ function iconoPlataforma($plataforma)
     }
 }
 
+function empresaDefault($default)
+{
+    if ($default){
+        return '<i class="fas fa-certificate text-muted text-xs"></i>';
+    }else{
+        return false;
+    }
+}
+

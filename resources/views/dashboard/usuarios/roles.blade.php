@@ -49,7 +49,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text text-bold">nombre{{--<i class="fas fa-code"></i>--}}</span>
                             </div>
-                            <input type="text" class="form-control" wire:model.debounce.10000ms="nombre" name="nombre" placeholder="[string]">
+                            <input type="text" class="form-control" wire:model.defer="nombre" name="nombre" placeholder="[string]">
                             @error('nombre')
                             <span class="col-sm-12 text-sm text-bold text-danger">
                                     <i class="icon fas fa-exclamation-triangle"></i>
@@ -97,6 +97,9 @@
                 <div class="row">
                     <div class="col-md-4">
                         @include('dashboard.usuarios.roles.usuarios')
+                    </div>
+                    <div class="col-md-4">
+                        @include('dashboard.usuarios.roles.empresas')
                     </div>
                 </div>
                     @else

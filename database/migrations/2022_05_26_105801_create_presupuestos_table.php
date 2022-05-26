@@ -23,6 +23,7 @@ class CreatePresupuestosTable extends Migration
             $table->decimal('subtotal', 12, 2);
             $table->decimal('iva', 12, 2);
             $table->decimal('total', 12, 2);
+            $table->string('moneda')->default('Bs.');
             $table->text('notas')->nullable();
             $table->bigInteger('users_id')->unsigned();
             $table->foreign('empresas_id')->references('id')->on('empresas')->cascadeOnDelete();

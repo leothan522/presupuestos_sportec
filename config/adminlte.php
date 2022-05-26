@@ -246,8 +246,14 @@ return [
         [
             'text'      => 'Configuración',
             'icon'      => 'fas fa-fw fa-cogs',
-            'can'       => 'usuarios',
+            'can'       => 'configuracion',
             'submenu' => [
+                [
+                    'text' => 'Empresas',
+                    'icon' => 'fas fa-fw fa-book',
+                    'route'  => 'empresas.index',
+                    'can'  => 'empresas',
+                ],
                 [
                     'text' => 'Usuarios',
                     'icon' => 'fas fa-fw fa-users',
