@@ -98,6 +98,7 @@ class EmpresasComponent extends Component
 
         $empresa->save();
 
+        $this->show($empresa->id);
         $this->view = 'show';
 
         $this->alert(
