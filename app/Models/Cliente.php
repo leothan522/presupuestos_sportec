@@ -9,7 +9,7 @@ class Cliente extends Model
 {
     use HasFactory;
 
-    protected $table = "cliente";
+    protected $table = "clientes";
     protected $fillable = [
         'rif',
         'nombre',
@@ -22,6 +22,12 @@ class Cliente extends Model
     public function presupuesto()
     {
         return $this->hasMany(Presupuesto::class, 'clientes_id', 'id');
+    }
+
+    public function scopeBuscar($query, $keyword)
+    {
+        return $query->where('rif', 'LIKE', "%$keyword%")
+            ->orWhere('nombre', 'LIKE', "%$keyword%");
     }
 
 }

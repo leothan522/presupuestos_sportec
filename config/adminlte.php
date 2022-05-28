@@ -244,6 +244,12 @@ return [
         // Sidebar items:
 
         [
+            'text' => 'Clientes',
+            'icon' => 'fas fa-fw fa-user-friends',
+            'route'  => 'clientes.index',
+            'can'  => 'clientes',
+        ],
+        [
             'text'      => 'Configuración',
             'icon'      => 'fas fa-fw fa-cogs',
             'can'       => 'configuracion',

@@ -17,6 +17,9 @@
                     <div class="col-md-4">
                         @include('dashboard.usuarios.permisos.empresas')
                     </div>
+                    <div class="col-md-4">
+                        @include('dashboard.usuarios.permisos.clientes')
+                    </div>
                 </div>
 
 

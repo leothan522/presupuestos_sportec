@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Dashboard\ClientesController;
 use App\Http\Controllers\Dashboard\EmpresasController;
 use App\Http\Controllers\Dashboard\ParametrosController;
 use App\Http\Controllers\Dashboard\SearchController;
@@ -31,5 +32,8 @@ Route::middleware(['auth', 'isadmin', 'estatus', 'permisos'])->prefix('/dashboar
     Route::get('pdf/usuarios', [UsersController::class, 'createPDF'])->name('usuarios.pdf');
 
     Route::get('empresas', [EmpresasController::class, 'index'])->name('empresas.index');
+
+    Route::get('clientes/{buscar?}', [ClientesController::class, 'index'])->name('clientes.index');
+    Route::get('export/clientes/{buscar?}', [ClientesController::class, 'export'])->name('clientes.excel');
 
 });
