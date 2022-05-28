@@ -51,7 +51,7 @@ class ClientesComponent extends Component
     public function rules()
     {
         return [
-            'rif'           =>  ['required', 'between:6,8', Rule::unique('clientes')->ignore($this->clientes_id)],
+            'rif'           =>  ['required', 'between:6,12', Rule::unique('clientes')->ignore($this->clientes_id)],
             'nombre'        =>  'required|min:4',
             'direccion'     =>  'required',
             'telefono'      =>  'numeric|nullable',
